@@ -1,0 +1,112 @@
+*{
+    padding:0;
+    margin:0;
+}
+.skyBackground{
+    height:100vh;
+    width:100%;
+    background-image: url('sky.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+.highway{
+    height: 200px;
+    width:500%;
+    display: block;
+    background-image: url('road.jpg');
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 1;
+    animation: highway 4s linear infinite;
+}
+@keyframes highway{
+ 100% {
+   transform: translateX(-4000px);
+ }
+}
+.city{
+    height:250px;
+    width:500%;
+    display: block;
+    background-image: url('city.png');
+    position: absolute;
+    bottom: 200px;
+    left:0;
+    right:0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: city 17s linear infinite;
+}
+@keyframes city{
+    100% {
+      transform: translateX(-1400px);
+    }
+   }
+.carContainer{
+    height: 250px;
+    width: 346px;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 38%;
+    right:0;
+    z-index: 2;
+}
+.car{
+    height:100%;
+    width:100%;
+    background-image: url('car.png'); 
+    background-repeat: no-repeat;
+    background-size:contain;
+    animation: car 1s infinite;
+}
+@keyframes car
+{
+   100% {
+       transform: translateY(-1px);
+   }
+   0% {
+       transform: translateY(0px);
+   }
+   50% {
+       transform: translateY(-1px);
+   }
+}
+.frontWheel{
+    height: 52px;
+    width: 52px;
+    display: block;
+    position: absolute;
+    left: 71.9%;
+    bottom: 120.2px;
+    right:0;
+    z-index: 2;
+}
+.backWheel{
+    height: 51px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    bottom: 120.6px;
+    left: 10.6%;
+    right:0;
+    z-index: 2;
+}
+.wheel{
+    height:100%;
+    width:100%;
+    background-image: url('wheel.png'); 
+    background-repeat: no-repeat;
+    background-size:contain ;
+    animation: wheel 0.5s linear infinite;
+}
+@keyframes wheel
+{
+  100% {
+      transform: rotate(360deg);
+  }
+}
